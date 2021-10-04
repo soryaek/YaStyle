@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
+    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <title>YaStyle</title>
+</head>
+
+<body>
+    <div class="myHeader sticky-top">
+        <div class="center">
+            <a href="index.html">
+                <h1>YaStyle</h1><span>
+        </div>
+        <div id="menu-nav" class="text-uppercase">
+            <ul>
+                <li><a href="shopping.html#women-dept">Women</a></li>
+                <li><a href="shopping.html#men-dept">Men</a></li>
+                <li><a href="shopping.html#girls-dept">Girls</a></li>
+                <li><a href="shopping.html#boys-dept">Boys</a></li>
+                <li><a href="shopping.html#accessories">Accessories</a></li>
+
+                <li class="cart">
+                    <a href="cart.html">
+                        <ion-icon id="cart-image" name="cart-outline"></ion-icon><span>0</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div>
+        <img src="onlineshop/covers/banner.jpg" width="100%" alt="Sale Banner" />
+    </div>
+    <div>
+        <div class="row">
+            <div class="col-lg-8 col-md-7 col-sm-12 mt-5 mx-auto">
+                <div class="shipping-info">
+                    <form class="p-5" id="form" method="POST">
+                        <label class="col mt-3">
+                            <h3 class="pl-5 font-weight-bold">Shipping Information</h3>
+                        </label>
+                        <div class="row pl-5 pr-5 mb-2">
+                            <div class="col-lg-6 mb-2">
+                                <input type="email" class="form-control" id="email-shipping" name="email"
+                                    placeholder="Email Address" required>
+                            </div>
+                            <div class="col-lg-6">
+                                <input type="tel" class="form-control" id="phone-shipping" name="phone"
+                                    placeholder="Phone Number" required>
+                            </div>
+                        </div>
+                        <div class="row pl-5 pr-5 mb-2">
+                            <div class="col-lg-6 mb-2">
+                                <input type="text" class="form-control w-100" id="fname-shipping" name="fname"
+                                    placeholder="First Name" required>
+                            </div>
+                            <div class="col-lg-6">
+                                <input type="text" class="form-control w-100" id="lname-shipping" name="lname"
+                                    placeholder="Last Name" required>
+                            </div>
+                        </div>
+
+                        <div class="row pl-5 pr-5 mb-2">
+                            <div class="col-lg-12 mb-2">
+                                <input type="text" class="form-control w-100" id="address-shipping" name="address"
+                                    placeholder="Address " required>
+                            </div>
+                        </div>
+                        <div class="row pl-5 pr-5 mb-2">
+                            <div class="col-lg-4 mb-2">
+                                <input type="text" class="form-control w-100" id="city-shipping" name="city"
+                                    placeholder="City" required>
+                            </div>
+                            <div class="col-lg-4 mb-2">
+                                <input type="zip" class="form-control" id="zipcode-shipping" name="zipcode"
+                                    placeholder="Postal Code" required>
+                            </div>
+                            <div class="col-lg-4">
+                                <input type="text" class="form-control w-100" id="state-shipping" name="state"
+                                    placeholder="State " required>
+                            </div>
+                            <input type="hidden" id="confirmation-num" name="confirmation-num">
+                            <input type="hidden" class="total-summary" name="totalSummary"></input>
+
+                        </div>
+                        <div class="checkout-btn">
+                            <button type="submit" class="checkout w-25" id="button">PLACE ORDER</button></a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+</body>
+<script src="script.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script type="text/javascript">
+    document.getElementById('confirmation-num').value = Math.floor(10000000 + Math.random() * 90000000);
+    (function () {
+        emailjs.init("user_mY2llz9Bi4TyW14Hcnz4q");
+    })();
+</script>
+<script src="sendEmail.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
